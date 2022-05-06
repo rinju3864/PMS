@@ -1,0 +1,239 @@
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.dll.config
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.pdb
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csc.exe
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csc.exe.config
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csc.rsp
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csi.exe
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csi.exe.config
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\csi.rsp
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.AppContext.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Console.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.IO.Compression.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Claims.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.ValueTuple.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\vbc.exe
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\vbc.exe.config
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\vbc.rsp
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csprojAssemblyReference.cache
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CoreCompileInputs.cache
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CopyComplete
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.dll
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.pdb
+C:\Users\Yash Kataria\source\repos\Placement Management System\Placement Management System\bin\AjaxControlToolkit.dll
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.dll.config
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.dll
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\Placement Management System.pdb
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\AjaxControlToolkit.dll
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CopyComplete
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.dll
+C:\Users\DELL\source\repos\Placement Management System\Placement Management System\obj\Debug\Placement Management System.pdb
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.dll.config
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.pdb
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.exe
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.exe.config
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.rsp
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.exe
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.exe.config
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.rsp
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.AppContext.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Console.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Compression.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Claims.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.ValueTuple.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.exe
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.exe.config
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.rsp
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\AjaxControlToolkit.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.dll
+C:\Users\LENOVO\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.pdb
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.dll.config
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\Placement Management System.pdb
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.exe
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.exe.config
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csc.rsp
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.exe
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.exe.config
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\csi.rsp
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.AppContext.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Console.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Compression.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Claims.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.ValueTuple.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.exe
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.exe.config
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\vbc.rsp
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\AjaxControlToolkit.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csprojAssemblyReference.cache
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CoreCompileInputs.cache
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CopyComplete
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.dll
+C:\Users\mbkai\OneDrive\Desktop\Placement Management System\Placement Management System\obj\Debug\Placement Management System.pdb
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\Placement Management System.dll.config
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\Placement Management System.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\Placement Management System.pdb
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csc.exe
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csc.exe.config
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csc.rsp
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csi.exe
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csi.exe.config
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\csi.rsp
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.AppContext.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Console.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.IO.Compression.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.IO.Pipes.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Claims.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.ValueTuple.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\vbc.exe
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\vbc.exe.config
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\vbc.rsp
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\AjaxControlToolkit.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CoreCompileInputs.cache
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.CopyComplete
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\obj\Debug\Placement Management System.dll
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\obj\Debug\Placement Management System.pdb
+C:\Users\RINJU\Source\Repos\Placement-Management-System\Placement Management System\Placement Management System\obj\Debug\Placement Management System.csproj.AssemblyReference.cache

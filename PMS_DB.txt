@@ -1,0 +1,301 @@
+CREATE TABLE [dbo].[tbl_Student_Basic_Details]
+(
+	[Student_Id] BIGINT NOT NULL PRIMARY KEY, 
+	[Student_Name] VARCHAR(50) NOT NULL, 
+    	[Student_Address] VARCHAR(150) NOT NULL, 
+    	[Student_City] VARCHAR(25) NOT NULL,
+	[Student_State] VARCHAR(15) NOT NULL,
+    	[Student_Birthdate] DATE NOT NULL, 
+    	[Student_Gender] VARCHAR(6) NOT NULL, 
+    	[Student_Phone_No] VARCHAR(14) NOT NULL, 
+    	[Student_Email_Id] VARCHAR(320) NOT NULL, 
+    	[Student_UG_Course] VARCHAR(9) NOT NULL,
+	[Student_PG_Course] VARCHAR(9) NOT NULL,
+    	[Student_Password] VARCHAR(32) NOT NULL, 
+    	[Student_Photo] IMAGE NOT NULL
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Company_Basic_Details] 
+(
+    [Company_Id]                   INT           IDENTITY (100,1) NOT NULL,
+    [Company_Name]                 VARCHAR (50)  NOT NULL,
+    [Company_Email_Id]             VARCHAR (320) NOT NULL,
+    [Company_Contact_No]           VARCHAR (14)  NOT NULL,
+    [Company_State]                VARCHAR (15)  NOT NULL,
+    [Company_City]                 VARCHAR (25)  NOT NULL,
+    [Company_Address]              VARCHAR (150) NOT NULL,
+    [Company_Representative1_Name] VARCHAR (50)  NOT NULL,
+    [Company_Representative2_Name] VARCHAR (50)  NULL,
+    [Password]                     VARCHAR (32)  NOT NULL,
+    [Company_Website]              VARCHAR (30)  NULL,
+    [Company_Logo]                 IMAGE         NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC)
+)
+
+CREATE TABLE [dbo].[tbl_Company_Offerings]
+(
+    [Company_Id] INT NOT NULL PRIMARY KEY, 
+    [Selection_Mode] VARCHAR(10) NOT NULL, 
+    [Stipend] FLOAT NOT NULL, 
+    [Package] FLOAT NOT NULL, 
+    [Tenure] TINYINT NULL, 
+    [Estimate_Arrival_Date_From] DATE NOT NULL, 
+    [Estimate_Arrival_Date_To] DATE NOT NULL, 
+    [Estimate_Required_Students] TINYINT NOT NULL, 
+    [Company_Total_Rounds] INT NOT NULL,
+    [Last_Updated_Year] INT NOT NULL,
+    CONSTRAINT [FK_tbl_Company_Offerings] FOREIGN KEY ([Company_Id]) REFERENCES [tbl_Company_Basic_Details]([Company_Id]), 
+
+)
+
+CREATE TABLE [dbo].[tbl_Technology]
+(
+    [Technology_Id] INT NOT NULL IDENTITY(200, 1), 
+    [Technology_Name] VARCHAR(50) NOT NULL PRIMARY KEY
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Student_Required_Technology] (
+    [Student_Id]    BIGINT NOT NULL,
+    [Technology_Name] varchar(50)    NOT NULL,
+    PRIMARY KEY CLUSTERED ([Student_Id] ASC, [Technology_Name] ASC),
+    CONSTRAINT [FK_tbl_Student_Required_Technology_1] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[tbl_Student_Basic_Details] ([Student_Id]), 
+    CONSTRAINT [FK_tbl_Student_Required_Technology_2] FOREIGN KEY ([Technology_Name]) REFERENCES [tbl_Technology]([Technology_Name])
+   
+)
+
+
+CREATE TABLE [dbo].[tbl_Company_Required_Technology] (
+    [Company_Id]      INT          NOT NULL,
+    [Technology_Name] VARCHAR (50) NOT NULL,
+    [Updation_Time] DATETIME NOT NULL, 
+    PRIMARY KEY CLUSTERED ([Updation_Time], [Technology_Name], [Company_Id]),
+    CONSTRAINT [FK_tbl_Company_Required_Technology_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id]),
+    CONSTRAINT [FK_tbl_Company_Required_Technology_2] FOREIGN KEY ([Technology_Name]) REFERENCES [dbo].[tbl_Technology] ([Technology_Name])
+)
+
+
+CREATE TABLE [dbo].[tbl_Admin_Login] (
+    [Admin_Id]   INT           IDENTITY (1, 1) NOT NULL,
+    [Email_Id]   VARCHAR (320) NOT NULL,
+    [Admin_Name] VARCHAR (50)  NOT NULL,
+    [Password]   VARCHAR (16)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([Admin_Id], [Email_Id])
+)
+
+
+
+
+CREATE TABLE [dbo].[tbl_Student_Marks]
+(
+	[Student_Marks_Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    	[Student_Id] BIGINT NOT NULL, 
+    	[Student_SSC_Percentage] FLOAT NOT NULL,
+    	[Student_HSC_Percentage] FLOAT NOT NULL, 
+    	[Student_SGPA_Sem_1] FLOAT NOT NULL,
+	[Student_KT_Sem_1] TINYINT NULL,
+    	[Student_SGPA_Sem_2] FLOAT NOT NULL, 
+    	[Student_KT_Sem_2] TINYINT NULL,
+	[Student_SGPA_Sem_3] FLOAT NOT NULL,
+	[Student_KT_Sem_3] TINYINT NULL,
+    	[Student_SGPA_Sem_4] FLOAT NOT NULL,
+	[Student_KT_Sem_4] TINYINT NULL,
+    	[Student_SGPA_Sem_5] FLOAT NOT NULL,
+	[Student_KT_Sem_5] TINYINT NULL,
+    	[Student_SGPA_Sem_6] FLOAT NOT NULL,
+	[Student_KT_Sem_6] TINYINT NULL,
+    	[Student_SGPA_Sem_7] FLOAT NOT NULL,
+	[Student_KT_Sem_7] TINYINT NULL,
+    	[Student_SGPA_Sem_8] FLOAT NOT NULL,
+	[Student_KT_Sem_8] TINYINT NULL,
+    	[Student_SGPA_Sem_9] FLOAT NOT NULL,
+	[Student_KT_Sem_9] TINYINT NULL,
+	[Student_SGPA_Sem_10] FLOAT NULL,
+	[Student_KT_Sem_10] TINYINT NULL,
+    	[Student_SGPA_Sem_11] FLOAT NULL,
+	[Student_KT_Sem_11] TINYINT NULL,
+    	[Student_SGPA_Sem_12] FLOAT NULL,
+	[Student_KT_Sem_12] TINYINT NULL,
+	[Student_SGPA_Sem_13] FLOAT NULL,
+	[Student_KT_Sem_13] TINYINT NULL,
+    	[Student_SGPA_Sem_14] FLOAT NULL, 
+	[Student_KT_Sem_14] TINYINT NULL,
+    	[Student_UG_CGPA] FLOAT NOT NULL, 
+    	[Student_PG_CGPA] FLOAT NOT NULL, 
+    	CONSTRAINT [FK_tbl_Student_Marks_ToTable] FOREIGN KEY ([Student_Id]) REFERENCES [tbl_Student_Basic_Details]([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Interview_Attendance] (
+    [Company_Id] INT     NOT NULL,
+    [Student_Id] BIGINT  NOT NULL,
+    [Status]     VARCHAR(8) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC, [Student_Id] ASC),
+    CONSTRAINT [FK_tbl_Interview_Attendance_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id]),
+    CONSTRAINT [FK_tbl_Interview_Attendance_2] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[tbl_Student_Basic_Details] ([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Shortlist_Criteria] (
+    [Company_Id]                    INT          NOT NULL,
+    [Under_Graduation_Degree_Type ] VARCHAR (50) NOT NULL,
+    [Post_Graduation_Degree_Type]   VARCHAR (50) NOT NULL,
+    [SSC_Percentage]                FLOAT (53)   NOT NULL,
+    [HSC_Percentage]                FLOAT (53)   NOT NULL,
+    [SGPA]			    FLOAT (53)   NOT NULL,
+    [CGPA]			    FLOAT (53)   NOT NULL,
+    [Additional_Technology]	    VARCHAR(50) NULL, 
+    [Allow_KT]			    TINYINT NOT NULL, 
+    CONSTRAINT [PK_tbl_Shortlist_Criteria] PRIMARY KEY CLUSTERED ([Company_Id] ASC),
+    CONSTRAINT [FK_tbl_Shortlist_Criteria_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id])
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Generate_Schedule] (
+    [Schedule_Id]       INT           IDENTITY (300, 1) NOT NULL,
+    [Company_Id]        INT           NOT NULL,
+    [Interview_Mode]    VARCHAR (20)  NOT NULL,
+    [Interview_Venue]   VARCHAR (MAX) NOT NULL,
+    [Arrival_Date]      DATETIME      NOT NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC),
+    CONSTRAINT [FK_tbl_Generate_Schedule_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id])
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Interview_Results] (
+    [Company_Id]    INT        NOT NULL,
+    [Student_Id]    BIGINT     NOT NULL,
+    [Status]        VARCHAR (8)    NOT NULL,
+    [Final_Stipend] FLOAT (53) NULL,
+    [Final_Package] FLOAT (53) NULL,
+    [Final_Tenure]  TINYINT    NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC, [Student_Id] ASC),
+    CONSTRAINT [FK_tbl_Interview_Results_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id]),
+    CONSTRAINT [FK_tbl_Interview_Results_2] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[tbl_Student_Basic_Details] ([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Invitation]
+(
+    [Company_Email_Id] VARCHAR(320) NOT NULL PRIMARY KEY, 
+    [Company_Name] VARCHAR(50) NOT NULL, 
+    [Status] TINYINT NOT NULL
+)
+
+CREATE TABLE [dbo].[tbl_Company_Past_Records] (
+    [Company_Id]               INT        NOT NULL,
+    [Updation_Year]            INT   NOT NULL,
+    [Highest_Stipend]          FLOAT (53) NOT NULL,
+    [Highest_Package]          FLOAT (53) NOT NULL,
+    [Lowest_Tenure]            TINYINT    NOT NULL,
+    [No_Of_Recruited_Students] INT        NOT NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC, [Updation_Year] ASC),
+    CONSTRAINT [FK_tbl_Company_Past_Records_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id])
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Student_Shortlist]
+(
+    [Company_Id] INT NOT NULL , 
+    [Student_Id] BIGINT NOT NULL, 
+    [Shortlisted_Date] DATETIME NOT NULL, 
+    PRIMARY KEY ([Student_Id], [Company_Id]),
+    CONSTRAINT [FK_tbl_Student_Shortlist_1] FOREIGN KEY ([Company_Id]) REFERENCES [tbl_Company_Basic_Details]([Company_Id]), 
+    CONSTRAINT [FK_tbl_Student_Shortlist_2] FOREIGN KEY ([Student_Id]) REFERENCES [tbl_Student_Basic_Details]([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Student_Round_Details] (
+    [Round_Id]      INT          IDENTITY (700,1) NOT NULL,
+    [Student_Id]    BIGINT       NOT NULL,
+    [Company_Id]    INT          NOT NULL,
+    [Round1_Marks]  FLOAT (53)   NULL,
+    [Round1_Status] VARCHAR (20) NULL,
+    [Round2_Marks]  FLOAT (53)   NULL,
+    [Round2_Status] VARCHAR (20) NULL,
+    [Round3_Marks]  FLOAT (53)   NULL,
+    [Round3_Status] VARCHAR (20) NULL,
+    [Round4_Marks]  FLOAT (53)   NULL,
+    [Round4_Status] VARCHAR (20) NULL,
+    PRIMARY KEY CLUSTERED ([Round_Id] ASC, [Student_Id] ASC),
+    CONSTRAINT [FK_tbl_Student_Round_Details_1] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id]),
+    CONSTRAINT [FK_tbl_Student_Round_Details_2] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[tbl_Student_Basic_Details] ([Student_Id])
+);
+
+
+
+
+CREATE TABLE [dbo].[tbl_Student_Prefered_City]
+(
+    [Student_Id] BIGINT NOT NULL , 
+    [Prefered_City] VARCHAR(30) NOT NULL, 
+    PRIMARY KEY ([Student_Id], [Prefered_City]), 
+    CONSTRAINT [FK_tbl_Student_Prefered_City_1] FOREIGN KEY ([Student_Id]) REFERENCES [tbl_Student_Basic_Details]([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Company_Alerts]
+(
+    [Alert_Id] INT IDENTITY (600, 1) NOT NULL ,
+    [Company_Id] INT NOT NULL , 
+    [Company_Email_Id] VARCHAR(320) NOT NULL, 
+    [Subject] VARCHAR(100) NOT NULL, 
+    [Message] VARCHAR(MAX) NOT NULL, 
+    [Alert_Time] DATETIME NOT NULL, 
+    PRIMARY KEY ([Alert_Id] ASC,[Company_Id] ASC),
+    CONSTRAINT [FK_tbl_Company_Alerts_1] FOREIGN KEY (Company_Id) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id])
+
+)
+
+
+
+CREATE TABLE [dbo].[tbl_Company_Blacklist_Status]
+(
+	[Company_Id]       INT           NOT NULL,
+    [Company_Blacklist_Status] VARCHAR (3) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Company_Id] ASC),
+    CONSTRAINT [FK_tbl_Company_Blacklist_Status] FOREIGN KEY ([Company_Id]) REFERENCES [dbo].[tbl_Company_Basic_Details] ([Company_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Interested_Student]
+(
+    [Company_Id] INT NOT NULL, 
+    [Student_Id] BIGINT NOT NULL,
+    PRIMARY KEY ([Student_Id], [Company_Id]),
+    CONSTRAINT [FK_tbl_Interested_Student_1] FOREIGN KEY ([Company_Id]) REFERENCES [tbl_Company_Basic_Details]([Company_Id]), 
+    CONSTRAINT [FK_tbl_Interested_Student_2] FOREIGN KEY ([Student_Id]) REFERENCES [tbl_Student_Basic_Details]([Student_Id])
+)
+
+
+CREATE TABLE [dbo].[tbl_Company_Visit]
+(
+    [Visit_Id] INT NOT NULL PRIMARY KEY IDENTITY(701, 1), 
+    [Visit_Team] VARCHAR(MAX) NOT NULL, 
+    [Company_Name] VARCHAR(50) NOT NULL, 
+    [Date_Of_Visit] DATETIME NOT NULL, 
+    [Person_Interacted] VARCHAR(50) NOT NULL, 
+    [Contact_No] VARCHAR(13) NOT NULL, 
+    [Email_Id] VARCHAR(320) NOT NULL, 
+    [Experience] VARCHAR(MAX) NULL, 
+    [Findings] VARCHAR(MAX) NULL, 
+    [Remarks] VARCHAR(MAX) NULL, 
+    [Next_Year_Recommended] VARCHAR(5) NOT NULL
+)
+
+
+CREATE TABLE [dbo].[tbl_Invitation_Status] (
+    [Year]                INT NOT NULL,
+    [Invitation_Accepted] INT NULL,
+    [Invitation_Sent]     INT NULL,
+    [Student_Count]       INT NULL,
+    PRIMARY KEY CLUSTERED ([Year] ASC)
+)
+
+

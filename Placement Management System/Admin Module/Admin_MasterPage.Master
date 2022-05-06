@@ -1,0 +1,405 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin_MasterPage.master.cs" Inherits="Placement_Management_System.Admin_Module.Admin_MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Dashboard Template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Dashboard Template/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Dashboard Template/css/datepicker3.css" rel="stylesheet">
+    <link href="../Dashboard Template/css/styles.css" rel="stylesheet">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <style>
+        #btn_scrollTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 22px;
+            height: auto !important;
+            border: none;
+            outline: none;
+            background-color: #242c42;
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 4px;
+        }
+
+            #btn_scrollTop:hover {
+                background-color: #30a5ff;
+                color: black;
+            }
+
+        #btn_Logout {
+            text-align: left !important;
+            padding: 0px !important;
+        }
+
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url("../Dashboard Template/images/loader-64x/Preloader_2.gif") center no-repeat #fff;
+        }
+    </style>
+
+    <%-- Page Loader GIF --%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        $(window).load(function () {
+            $(".se-pre-con").fadeOut("50000");
+
+        });
+    </script>
+
+    <script language="JavaScript"> 
+
+        var message = 'Right Click Is Disabled';
+        function clickIE() { if (event.button == 2) { alert(message); return false; } }
+        function clickNS(e) {
+            if (document.layers || (document.getElementById && !document.all)) {
+                if (e.which == 2 || e.which == 3) { alert(message); return false; }
+            }
+        }
+        if (document.layers) { document.captureEvents(Event.MOUSEDOWN); document.onmousedown = clickNS; }
+        else if (document.all && !document.getElementById) { document.onmousedown = clickIE; }
+        document.oncontextmenu = new Function('alert(message);return false')
+
+        window.onload = function () {
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function (e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        };
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <div class="se-pre-con"></div>
+
+    <form id="form1" runat="server">
+
+        <button onclick="topFunction()" id="btn_scrollTop" title="Go to top">
+            <span
+                class="glyphicon glyphicon-upload"></span>
+        </button>
+
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#sidebar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <em class="fa fa-cogs"></em><span class="label label-info">2</span>
+                        </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="Admin_About_Us.aspx">
+                                        <div>
+                                            <em class="fa fa-info"></em>&nbsp;About Us
+								
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="Admin_Contact_Us.aspx">
+                                        <div>
+                                            <em class="fa fa-phone"></em>&nbsp;Contact Us
+								
+                                        </div>
+                                    </a>
+                                </li>
+                                <%--<li>
+                                    <a href="#">
+                                        <div>
+                                            <em class="fa fa-sign-out"></em>Logout
+								
+                                        </div>
+                                    </a>
+                                </li>--%>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+
+        <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+            <div class="profile-sidebar">
+                <div class="profile-userpic">
+                    <img src="../Dashboard Template/images/UserLogo.png" class="img-responsive" alt="">
+                </div>
+                <div class="profile-usertitle">
+                    <div class="profile-usertitle-name">
+                        <asp:Label ID="lbl_Username" runat="server" Text=""></asp:Label>
+                    </div>
+                    <div class="profile-usertitle-status"><span class="indicator label-success"></span>Administrator</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="divider"></div>
+
+            <ul class="nav menu" id="sidebar_menu">
+                <li><a href="Admin_Dashboard.aspx"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+
+                <li class="parent ">
+                    <a data-toggle="collapse" href="#sub-item-1-1">
+                        <em class="fa fa-tasks">&nbsp;</em> Manage Company <span data-toggle="collapse" href="#sub-item-1-1"
+                            class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-1-1">
+                        <li><a class="" href="Invitation_Template.aspx">
+                            <span class="fa fa-envelope">&nbsp;</span> Configure Invites
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Company_ViewProfile.aspx" id="sub-item-1-3">
+                            <span class="fa fa-id-card">&nbsp;</span> Manage Profile's
+                        </a>
+                        </li>
+                        <%--<li><a class="" href="Admin_Manage_Profile.aspx" id="sub-item-1-4">
+                            <span class="fa fa-id-card-o">&nbsp;</span> Manage Profile's
+                        </a>
+                        </li>--%>
+                        <li><a class="" href="Admin_Configure_Alert.aspx" id="sub-item-1-5">
+                            <span class="fa fa-bell">&nbsp;</span> Configure Alert
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Blacklist_Configuration.aspx" id="sub-item-1-6">
+                            <span class="fa fa-filter">&nbsp;</span> Blacklist Configuration
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Student_Marks_Entry.aspx" id="sub-item-1-7">
+                            <span class="fa fa-list">&nbsp;</span> Interview Rounds Marks
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Interview_Attendance.aspx" id="sub-item-1-8">
+                            <span class="fa fa-check">&nbsp;</span> Interview Attendance
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Add_Company_Visit.aspx" id="sub-item-1-9">
+                            <span class="fa fa-university">&nbsp;</span> Add Company Visit
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_View_Company_Visit.aspx" id="sub-item-1-10">
+                            <span class="fa fa-align-justify">&nbsp;</span> View Company's Visit
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="parent ">
+                    <a data-toggle="collapse" href="#sub-item-2-1">
+                        <em class="fa fa-tasks">&nbsp;</em> Manage Student <span data-toggle="collapse" href="#sub-item-2-1"
+                            class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-2-1">
+
+                        <li><a class="" href="#" id="sub-item-2-1">
+                            <span class="fa fa-id-card-o">&nbsp;</span> View Profile
+                        </a>
+                        </li>
+                        <li><a class="" href="#" id="sub-item-2-2">
+                            <span class="fa fa-pencil-square-o">&nbsp;</span> Update Profile
+                        </a>
+                        </li>
+                        <li><a class="" href="#" id="sub-item-2-3">
+                            <span class="fa fa-trash">&nbsp;</span> Delete Profile
+                        </a>
+                        </li>
+                        <li><a class="" href="#" id="sub-item-2-4">
+                            <span class="fa fa-bell">&nbsp;</span> Configure Alert
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="Admin_Schedule_Generation.aspx"><i class="fa fa-spinner fa-pulse fa-1.5x fa-fw"></i>&nbsp;Generate Schedule</a></li>
+
+
+
+                <li class="parent ">
+                    <a data-toggle="collapse" href="#sub-item-3-1">
+                        <em class="fa fa-sort-amount-desc">&nbsp;</em> Generate Shortlist <span data-toggle="collapse" href="#sub-item-3-1"
+                            class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-3-1">
+
+                        <li><a class="" href="#" id="sub-item-3-1">
+                            <span class="fa fa-user-circle">&nbsp;</span> Student
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Company_Shortlist.aspx" id="sub-item-3-2">
+                            <span class="fa fa-user-circle">&nbsp;</span> Company
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="parent ">
+                    <a data-toggle="collapse" href="#sub-item-4-1">
+                        <em class="fa fa-bar-chart">&nbsp;</em> Report Analysis <span data-toggle="collapse" href="#sub-item-4-1"
+                            class="icon pull-right"><em class="fa fa-plus"></em></span>
+                    </a>
+                    <ul class="children collapse" id="sub-item-4-1">
+
+                        <li><a class="" href="#" id="sub-item-4-1">
+                            <span class="fa fa-user-circle">&nbsp;</span> Student Side
+                        </a>
+                        </li>
+                        <li><a class="" href="Admin_Report_Analysis.aspx" id="sub-item-4-2">
+                            <span class="fa fa-user-circle">&nbsp;</span> Company Side
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="Admin_About_Us.aspx"><i class="fa fa-info-circle">&nbsp;</i> About Us</a></li>
+
+                <li><a href="Admin_Contact_Us.aspx"><i class="fa fa-phone">&nbsp;</i> Contact Us</a></li>
+
+                <li><a href="#"><em class="fa fa-power-off">&nbsp;</em>
+                    <asp:Button ID="btn_Logout" runat="server" Width="90%" Text="Logout"
+                        OnClick="btn_Logout_Click" BackColor="Transparent" BorderColor="Transparent"
+                        BorderStyle="None" BorderWidth="0px" CausesValidation="False" />
+                </a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <script src="../Dashboard Template/js/jquery-1.11.1.min.js"></script>
+        <script src="../Dashboard Template/js/bootstrap.min.js"></script>
+        <script src="../Dashboard Template/js/chart.min.js"></script>
+        <%--<script src="../Dashboard Template/js/chart-data.js"></script>--%>
+        <script src="../Dashboard Template/js/easypiechart.js"></script>
+        <script src="../Dashboard Template/js/easypiechart-data.js"></script>
+        <script src="../Dashboard Template/js/bootstrap-datepicker.js"></script>
+        <script src="../Dashboard Template/js/custom.js"></script>
+        <script>
+            window.onload = function () {
+                var chart1 = document.getElementById("line-chart").getContext("2d");
+                window.myLine = new Chart(chart1).Line(lineChartData, {
+                    responsive: true,
+                    scaleLineColor: "rgba(0,0,0,.2)",
+                    scaleGridLineColor: "rgba(0,0,0,.05)",
+                    scaleFontColor: "#c5c7cc"
+                });
+            };
+        </script>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("btn_scrollTop").style.display = "block";
+                } else {
+                    document.getElementById("btn_scrollTop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+            $(function () {
+                var current = location.pathname;
+                var filename = current.substring(current.lastIndexOf('/') + 1);
+                $('#sidebar_menu li').each(function () {
+                    var Temp = $(this).children().attr('href');
+                    if (Temp == filename) {
+                        $(this).addClass('active');
+                    }
+                    //if ($this.attr('href').indexOf(filename) !== -1) {
+                    //    $this.addClass('active');
+                    //}
+                });
+
+                $('.parent ul li').each(function () {
+                    var Temp = $(this).children().attr('href');
+                    if (Temp == filename) {
+                        var parent1 = $(this).parent();
+                        var parent2 = $(parent1).parent();
+                        $(parent2).addClass('active');
+                    }
+                });
+            });
+        </script>
+
+
+    </form>
+</body>
+</html>

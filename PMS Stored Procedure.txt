@@ -1,0 +1,530 @@
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Login]
+	(@EmailId  varchar(320),@Password varchar(32))
+AS
+Begin
+	Select * from tbl_Company_Basic_Details where Company_Email_Id=@EmailId and Password=@Password;
+End
+RETURN 0
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Reset_Password]
+	(@ResetPassword varchar(32),@EmailID varchar(320),@UserType int)
+AS
+Begin
+	if(@UserType=1)
+	Begin
+		Update tbl_Company_Basic_Details set Password=@ResetPassword where Company_Email_Id=@EmailID;
+	End
+	Else if(@UserType=0)
+	Begin
+		Update tbl_Admin_Login set Password=@ResetPassword where Email_Id=@EmailID;
+	End
+End
+RETURN 0
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Basic_Registration]
+	(@cName varchar(50),@cEmail varchar(320),@cContact varchar(14),@cState varchar(15),@cCity varchar(25),@cAddress varchar(250),@cRepresentative1 varchar(30),@cRepresentative2 varchar(30),
+	@cPasssword varchar(32),@cWebsite varchar(30),@cLogo image)
+AS
+Begin
+	Insert into tbl_Company_Basic_Details values(@cName,@cEmail,@cContact,@cState,@cCity,@cAddress,@cRepresentative1,@cRepresentative2,@cPasssword,@cWebsite,@cLogo)
+End
+RETURN 0
+
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Criteria_Registration]
+	(
+		@UpdateOrNot INT,
+		@Company_Id INT, 
+		@Selection_Mode VARCHAR(10) , 
+		@Stipend FLOAT , 
+		@Package FLOAT , 
+		@Tenure TINYINT, 
+		@Estimate_Arrival_Date_From DATE , 
+		@Estimate_Arrival_Date_To DATE , 
+		@Estimate_Required_Students TINYINT , 
+		@Company_Total_Rounds INT ,
+		@Last_Updated_Year INT,
+
+		@Under_Graduation_Degree_Type  VARCHAR(50) ,
+		@Post_Graduation_Degree_Type   VARCHAR (50) ,
+		@SSC_Percentage                FLOAT    ,
+		@HSC_Percentage                FLOAT    ,
+		@SGPA                          FLOAT    ,
+		@CGPA                          FLOAT    ,
+		@Additional_Technology         VARCHAR(50) ,
+		@Allow_KT                      TINYINT   
+	)
+AS
+Begin
+	if(@UpdateOrNot = 1)
+	Begin
+		
+		Update tbl_Company_Offerings set Selection_Mode=@Selection_Mode, Stipend=@Stipend,
+		Package=@Package,Tenure=@Tenure,Estimate_Arrival_Date_From=@Estimate_Arrival_Date_From,
+		Estimate_Arrival_Date_To=@Estimate_Arrival_Date_To,Estimate_Required_Students=@Estimate_Required_Students,
+		Company_Total_Rounds=@Company_Total_Rounds,Last_Updated_Year=@Last_Updated_Year where Company_Id=@Company_Id;
+
+		Update tbl_Shortlist_Criteria set [Under_Graduation_Degree_Type ]=@Under_Graduation_Degree_Type,
+		Post_Graduation_Degree_Type=@Post_Graduation_Degree_Type,SSC_Percentage=@SSC_Percentage,
+		HSC_Percentage=@HSC_Percentage,SGPA=@SGPA,CGPA=@CGPA,Additional_Technology=@Additional_Technology,
+		Allow_KT=@Allow_KT where Company_Id=@Company_Id;
+
+	End
+	
+	Else if(@UpdateOrNot = 0)
+	Begin
+		
+		Insert into tbl_Company_Offerings values (@Company_Id,@Selection_Mode,
+		@Stipend,@Package,@Tenure,@Estimate_Arrival_Date_From,@Estimate_Arrival_Date_To,
+		@Estimate_Required_Students,@Company_Total_Rounds,@Last_Updated_Year);
+
+		Insert into tbl_Shortlist_Criteria values (@Company_Id,@Under_Graduation_Degree_Type,
+		@Post_Graduation_Degree_Type,@SSC_Percentage,@HSC_Percentage,@SGPA,@CGPA,
+		@Additional_Technology,@Allow_KT)
+	End
+
+End
+RETURN 0
+
+
+
+CREATE PROCEDURE [dbo].[sp_Admin_Login]
+	(@EmailId  varchar(320),@Password varchar(32))
+AS
+Begin
+	Select * from tbl_Admin_Login where Email_Id=@EmailId and Password=@Password;
+End
+RETURN 0
+
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Update_Profile]
+	(
+		@Company_Id                   INT,
+		@Company_Name                 VARCHAR (50)  ,
+		@Company_Email_Id             VARCHAR (320) ,
+		@Company_Contact_No           VARCHAR (14)  ,
+		@Company_State                VARCHAR (15)  ,
+		@Company_City                 VARCHAR (25)  ,
+		@Company_Address              VARCHAR (150) ,
+		@Company_Representative1_Name VARCHAR (50)  ,
+		@Company_Representative2_Name VARCHAR (50)  ,
+		@Company_Website              VARCHAR (30)  ,
+		@Company_Logo                 IMAGE	,		
+
+		@Selection_Mode             VARCHAR(10),
+		@Stipend                    FLOAT		,
+		@Package                    FLOAT		,
+		@Tenure                     TINYINT    ,
+		@Estimate_Arrival_Date_From DATE       ,
+		@Estimate_Arrival_Date_To   DATE       ,
+		@Estimate_Required_Students TINYINT    ,
+		@Company_Total_Rounds       INT        ,
+
+		@Under_Graduation_Degree_Type  VARCHAR (50) ,
+		@Post_Graduation_Degree_Type   VARCHAR (50) ,
+		@SSC_Percentage                FLOAT    ,
+		@HSC_Percentage                FLOAT    ,
+		@SGPA                          FLOAT   ,
+		@CGPA                          FLOAT    ,
+		@Additional_Technology         VARCHAR (50) ,
+		@Allow_KT                      TINYINT      
+	
+	)
+AS
+Begin 
+	Update tbl_Company_Basic_Details set Company_Name=@Company_Name, Company_Email_Id=@Company_Email_Id,
+	Company_Contact_No=@Company_Contact_No,Company_State=@Company_State,Company_City=@Company_City,
+	Company_Address=@Company_Address,Company_Representative1_Name=@Company_Representative1_Name,
+	Company_Representative2_Name=@Company_Representative2_Name,Company_Website=@Company_Website,
+	Company_Logo=@Company_Logo where Company_Id=@Company_Id;
+
+	Update tbl_Company_Offerings set Selection_Mode=@Selection_Mode,Stipend=@Stipend,Package=@Package,
+	Tenure=@Tenure,Estimate_Arrival_Date_From=@Estimate_Arrival_Date_From,Estimate_Arrival_Date_To=@Estimate_Arrival_Date_To,
+	Estimate_Required_Students=@Estimate_Required_Students, Company_Total_Rounds=@Company_Total_Rounds where Company_Id=@Company_Id; 
+
+	Update tbl_Shortlist_Criteria set [Under_Graduation_Degree_Type ]=@Under_Graduation_Degree_Type,
+	Post_Graduation_Degree_Type=@Post_Graduation_Degree_Type,SSC_Percentage=@SSC_Percentage,HSC_Percentage=@HSC_Percentage,
+	SGPA=@SGPA,CGPA=@CGPA,Additional_Technology=@Additional_Technology,Allow_KT=@Allow_KT where Company_Id=@Company_Id;
+End
+
+RETURN 0
+
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Alert]
+	(
+		@Company_Id       INT           ,
+		@Company_Email_Id VARCHAR (320) ,
+		@Subject          VARCHAR (100) ,
+		@Message          VARCHAR (MAX) ,
+		@Alert_Time       DATETIME      
+	)
+AS
+Begin
+	Insert into tbl_Company_Alerts values (@Company_Id,@Company_Email_Id,@Subject,@Message,@Alert_Time)
+End
+RETURN 0
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Delete_Company_Details]
+	(@Company_Id INT)
+AS
+
+Begin
+	Delete from tbl_Company_Alerts where Company_Id=@Company_Id;
+	Delete from tbl_Company_Offerings where Company_Id=@Company_Id;
+	Delete from tbl_Company_Past_Records where Company_Id=@Company_Id;
+	Delete from tbl_Company_Required_Technology where Company_Id=@Company_Id;
+	Delete from tbl_Generate_Schedule where Company_Id=@Company_Id;
+	Delete from tbl_Interview_Attendance where Company_Id=@Company_Id;
+	Delete from tbl_Interview_Results where Company_Id=@Company_Id;
+	Delete from tbl_Shortlist_Criteria where Company_Id=@Company_Id;
+	Delete from tbl_Company_Basic_Details where Company_Id=@Company_Id;
+
+End
+RETURN 0
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Blacklist_Configuration]
+(
+	@Company_Id INT,
+	@Status VARCHAR(3)
+)
+AS
+Begin
+	Update tbl_Company_Blacklist_Status set Company_BlackList_Status=@Status where Company_Id=@Company_Id;
+End
+RETURN 0
+
+
+
+CREATE PROCEDURE [dbo].[sp_Admin_Round_Marks_Entry]
+	(
+		@Company_Id int,
+		@Student_Id bigint,
+		@Round1_Marks  FLOAT    = NULL,
+		@Round1_Status VARCHAR (20) = NULL,
+		@Round2_Marks  FLOAT    = NULL,
+		@Round2_Status VARCHAR (20) = NULL,
+		@Round3_Marks  FLOAT    = NULL,
+		@Round3_Status VARCHAR (20) = NULL,
+		@Round4_Marks  FLOAT    = NULL,
+		@Round4_Status VARCHAR (20) = NULL,
+		@Action int
+	)
+
+AS
+Begin
+	if(@Action = 1)
+	Begin
+		Insert into tbl_Student_Round_Details values(@Student_Id,@Company_Id,@Round1_Marks,@Round1_Status,
+		@Round2_Marks,@Round2_Status,@Round3_Marks,@Round3_Status,@Round4_Marks,@Round4_Status);
+	End
+	else if(@Action=0)
+	Begin
+		Update tbl_Student_Round_Details set Round1_Marks=@Round1_Marks,Round1_Status=@Round1_Status,
+		Round2_Marks=@Round2_Marks,Round2_Status=@Round2_Status,Round3_Marks=@Round3_Marks,Round3_Status=@Round3_Status,
+		Round4_Marks=@Round4_Marks,Round4_Status=@Round4_Status where Company_Id=@Company_Id and Student_Id=@Student_Id;
+	End
+End	
+RETURN 0
+
+
+CREATE PROCEDURE [dbo].[sp_Interview_Attendance]
+(
+	@Company_Id int,
+	@Student_Id Bigint,
+	@Status varchar(8),
+	@Action int
+)
+AS
+Begin
+	if(@Action=0)
+	Begin
+		Insert into tbl_Interview_Attendance values (@Company_Id,@Student_Id,@Status);
+	End
+	else if(@Action=1)
+	Begin
+		Update tbl_Interview_Attendance set [Status]=@Status where Student_Id=@Student_Id and Company_Id=@Company_Id;
+	End
+End
+RETURN 0
+
+
+
+CREATE PROCEDURE [dbo].[sp_Student_Got_Placed]
+	(@Student_Placed int OUTPUT)
+
+AS
+Begin
+SET NOCOUNT ON;
+	declare @Count_Student int ;
+	declare @Count_Student_Selected int;
+	select @Count_Student=COUNT(*) from tbl_Interview_Results;
+	select @Count_Student_Selected=COUNT(*) from tbl_Interview_Results where Status='Select';
+	SET @Student_Placed=(@Count_Student_Selected*100)/@Count_Student;
+	
+End
+RETURN 0
+
+
+CREATE PROCEDURE [dbo].[sp_Invitation_Ratio]
+	(@Invitation_Ratio int OUTPUT)
+
+AS
+Begin
+SET NOCOUNT ON;
+	declare @Count_Company int ;
+	declare @Count_Company_Invitation int;
+	select @Count_Company=COUNT(*) from tbl_Invitation;
+	select @Count_Company_Invitation=COUNT(*) from tbl_Invitation where [Status]=1;
+	SET @Invitation_Ratio=(@Count_Company_Invitation*100)/@Count_Company;
+
+End
+RETURN 0;
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Post_Results]
+(
+	@Company_Id int,
+	@Student_Id Bigint,
+	@Status varchar(8),
+	@Final_Stipend float,
+	@Final_Package float,
+	@Final_Tenure Tinyint 
+)
+AS
+Begin
+
+	declare @Count_Student int;
+	select @Count_Student=COUNT(*) from tbl_Interview_Results where Company_Id=@Company_Id and Student_Id=@Student_Id;
+
+	if(@Count_Student=0)
+	Begin
+			Insert into tbl_Interview_Results values(@Company_Id,@Student_Id,@Status,@Final_Stipend,@Final_Package,@Final_Tenure)
+	End
+	else if(@Count_Student>=1)
+	Begin
+			Update tbl_Interview_Results set [Status]=@Status, [Final_Stipend]=@Final_Stipend,[Final_Package]=@Final_Package,[Final_Tenure]=@Final_Tenure where Student_Id=@Student_Id and Company_Id=@Company_Id
+	End
+End
+RETURN 0
+
+
+CREATE PROCEDURE [dbo].[sp_Generate_Schedule]
+(
+    @Company_Id        INT           ,
+    @Interview_Mode    VARCHAR (20)  ,
+    @Interview_Venue   VARCHAR (MAX) ,
+    @Arrival_Date      DATETIME      ,
+    @Action	       INT
+)
+AS
+Begin
+	if(@Action=0)
+	Begin
+		Insert into tbl_Generate_Schedule values (@Company_Id,@Interview_Mode,@Interview_Venue,@Arrival_Date); 
+	End
+	else if(@Action=1)
+	Begin
+		Update tbl_Generate_Schedule set Interview_Mode=@Interview_Mode,Interview_Venue=@Interview_Venue,Arrival_Date=@Arrival_Date where Company_Id=@Company_Id;
+	End
+End
+RETURN 0
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Past_Record]
+(
+	@Company_Id               INT        ,
+    @Updation_Year            INT		 ,
+    @Highest_Stipend          FLOAT		 ,
+    @Highest_Package          FLOAT		 ,
+    @Lowest_Tenure            TINYINT    ,
+    @No_Of_Recruited_Students INT        ,
+	@Action					  INT
+)
+AS
+Begin
+	if(@Action=0)
+	Begin
+		Insert into tbl_Company_Past_Records values (@Company_Id,@Updation_Year,@Highest_Stipend,@Highest_Package,@Lowest_Tenure,@No_Of_Recruited_Students);
+	End
+	else if(@Action=1)
+	Begin
+		Update tbl_Company_Past_Records set Updation_Year=@Updation_Year,Highest_Stipend=@Highest_Stipend,Highest_Package=@Highest_Package,Lowest_Tenure=@Lowest_Tenure,No_Of_Recruited_Students=@No_Of_Recruited_Students where Company_Id=@Company_Id and Updation_Year=@Updation_Year;
+	End
+End
+RETURN 0
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Report4_Highest_Package]
+As
+Begin
+	Declare @Updation_Year int,@Highest_Package float
+	
+	Declare NewCursor CURSOR READ_ONLY for 
+	SELECT tbl_Company_Past_Records.Updation_Year, MAX(tbl_Company_Past_Records.Highest_Package) AS Expr1
+    FROM tbl_Company_Basic_Details INNER JOIN
+    tbl_Company_Past_Records ON tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id
+    GROUP BY tbl_Company_Past_Records.Updation_Year ORDER BY tbl_Company_Past_Records.Updation_Year
+
+	Open NewCursor
+		FETCH NEXT From NewCursor into @Updation_Year,@Highest_Package
+		WHILE @@FETCH_STATUS=0
+		Begin
+			SELECT tbl_Company_Past_Records.Updation_Year as [Year], tbl_Company_Basic_Details.Company_Name as [Company Name], tbl_Company_Past_Records.Highest_Package as [Highest Package]
+            FROM     tbl_Company_Basic_Details INNER JOIN
+            tbl_Company_Past_Records ON tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id
+            WHERE(tbl_Company_Past_Records.Updation_Year = @Updation_Year) AND(tbl_Company_Past_Records.Highest_Package = @Highest_Package)
+			
+			FETCH NEXT From NewCursor into @Updation_Year,@Highest_Package
+			
+		End
+	Close NewCursor;
+	Deallocate NewCursor;
+End
+
+
+
+
+CREATE PROCEDURE [dbo].[sp_Report5_Highest_Stipend]
+As
+Begin
+	Declare @Updation_Year int,@Highest_Stipend float
+	
+	Declare NewCursor CURSOR READ_ONLY for 
+	SELECT tbl_Company_Past_Records.Updation_Year, MAX(tbl_Company_Past_Records.Highest_Stipend) AS Expr1
+    FROM tbl_Company_Basic_Details INNER JOIN
+    tbl_Company_Past_Records ON tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id
+    GROUP BY tbl_Company_Past_Records.Updation_Year ORDER BY tbl_Company_Past_Records.Updation_Year
+
+	Open NewCursor
+		FETCH NEXT From NewCursor into @Updation_Year,@Highest_Stipend
+		WHILE @@FETCH_STATUS=0
+		Begin
+			SELECT tbl_Company_Past_Records.Updation_Year as [Year], tbl_Company_Basic_Details.Company_Name as [Company Name], tbl_Company_Past_Records.Highest_Stipend as [Highest Stipend]
+            FROM     tbl_Company_Basic_Details INNER JOIN
+            tbl_Company_Past_Records ON tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id
+            WHERE(tbl_Company_Past_Records.Updation_Year = @Updation_Year) AND(tbl_Company_Past_Records.Highest_Stipend = @Highest_Stipend)
+			
+			FETCH NEXT From NewCursor into @Updation_Year,@Highest_Stipend
+			
+		End
+	Close NewCursor;
+	Deallocate NewCursor;
+End
+
+
+
+CREATE PROCEDURE [dbo].[sp_Report6_Attendance_Statistics]
+As
+Begin
+	Declare @Present_Count int, @Company_Name varchar(50)
+	
+	Declare NewCursor CURSOR READ_ONLY for             
+	SELECT tbl_Company_Basic_Details.Company_Name, COUNT(tbl_Interview_Attendance.Student_Id) AS Expr1
+	FROM tbl_Company_Basic_Details INNER JOIN tbl_Interview_Attendance ON
+	tbl_Company_Basic_Details.Company_Id = tbl_Interview_Attendance.Company_Id
+    WHERE(tbl_Interview_Attendance.Status = 'Present')
+    GROUP BY tbl_Company_Basic_Details.Company_Name
+
+	Open NewCursor
+		FETCH NEXT From NewCursor into @Company_Name,@Present_Count
+		WHILE @@FETCH_STATUS=0
+		Begin
+			
+			SELECT tbl_Company_Basic_Details.Company_Name as [Company Name], COUNT(tbl_Interview_Attendance.Student_Id) AS [Shortlisted Students],
+			@Present_Count as [Students Appeared In Interview], Concat((CAST(@Present_Count as FLOAT)/CAST((COUNT(tbl_Interview_Attendance.Student_Id)) as FLOAT)*100),'%') as [Total Attendance (In %)]
+			FROM tbl_Company_Basic_Details INNER JOIN tbl_Interview_Attendance ON
+			tbl_Company_Basic_Details.Company_Id = tbl_Interview_Attendance.Company_Id 
+			where tbl_Company_Basic_Details.Company_Name=@Company_Name
+			group by tbl_Company_Basic_Details.Company_Name
+
+			FETCH NEXT From NewCursor into @Company_Name,@Present_Count
+			
+		End
+	Close NewCursor;
+	Deallocate NewCursor;
+End
+
+
+CREATE PROCEDURE [dbo].[sp_Report7_Visit_Count]
+As
+Begin
+	Declare @Visit_Count int, @Company_Name varchar(50)
+	
+	Declare NewCursor CURSOR READ_ONLY for             
+	SELECT tbl_Company_Basic_Details.Company_Name,COUNT(tbl_Company_Past_Records.Company_Id) FROM
+	tbl_Company_Basic_Details INNER JOIN tbl_Company_Past_Records ON 
+	tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id GROUP BY
+	tbl_Company_Basic_Details.Company_Id, tbl_Company_Basic_Details.Company_Name ORDER BY 
+	COUNT(tbl_Company_Past_Records.Company_Id) DESC
+
+	Open NewCursor
+		FETCH NEXT From NewCursor into @Company_Name,@Visit_Count
+		WHILE @@FETCH_STATUS=0
+		Begin
+			
+            SELECT tbl_Company_Basic_Details.Company_Name AS[Company Name],Concat(@Visit_Count,' Years') AS
+			[Total Number of Time Visited Institute], MAX(tbl_Company_Past_Records.Highest_Stipend)
+			AS[Highest Stipend Offered], MAX(tbl_Company_Past_Records.Highest_Package)
+            AS[Highest Package Offered] FROM tbl_Company_Basic_Details INNER JOIN
+            tbl_Company_Past_Records ON tbl_Company_Basic_Details.Company_Id = tbl_Company_Past_Records.Company_Id
+			WHERE(tbl_Company_Basic_Details.Company_Name = @Company_Name)
+			GROUP BY tbl_Company_Basic_Details.Company_Name
+
+			FETCH NEXT From NewCursor into @Company_Name,@Visit_Count
+			
+		End
+	Close NewCursor;
+	Deallocate NewCursor;
+End
+
+
+
+CREATE PROCEDURE [dbo].[sp_Company_Visit]
+(
+    @Visit_Id	           INT=NULL,
+    @Visit_Team            VARCHAR (MAX) ,
+    @Company_Name          VARCHAR (50)  ,
+    @Date_Of_Visit         DATETIME      ,
+    @Person_Interacted     VARCHAR (50)  ,
+    @Contact_No            VARCHAR (13)  ,
+    @Email_Id              VARCHAR (320) ,
+    @Experience            VARCHAR (MAX) ,
+    @Findings              VARCHAR (MAX) ,
+    @Remarks               VARCHAR (MAX) ,
+    @Next_Year_Recommended VARCHAR (5)   ,
+    @Action		   INT
+)
+AS
+Begin
+	if(@Action=0)
+	Begin
+		Insert into tbl_Company_Visit values (@Visit_Team,@Company_Name,@Date_Of_Visit,@Person_Interacted,@Contact_No,
+		@Email_Id,@Experience,@Findings,@Remarks,@Next_Year_Recommended);
+	End
+	else if(@Action=1)
+	Begin
+		Update tbl_Company_Visit set Visit_Team=@Visit_Team,Company_Name=@Company_Name,Date_Of_Visit=@Date_Of_Visit,
+		Person_Interacted=@Person_Interacted,Contact_No=@Contact_No,Email_Id=@Email_Id,Experience=@Experience,
+		Findings=@Findings,Remarks=@Remarks,Next_Year_Recommended=@Next_Year_Recommended where Visit_Id=@Visit_Id;
+	End
+End
+RETURN 0
